@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="CRFC_Overlay">
+    <output-path>$PROJECT_DIR$/out/artifacts/CRFC_Overlay</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="Main" />
+        <option name="description" value="" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="title" value="Thisisisa" />
+        <option name="vendor" value="" />
+        <option name="version" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="CRFC_Overlay.jar">
+        <element id="module-output" name="CRFC_Overlay" />
+        <element id="library" level="application" name="jdk1.8" />
+        <element id="library" level="application" name="jfxrt" />
+        <element id="library" level="application" name="lib" />
+      </element>
+    </root>
+  </artifact>
+</component>
