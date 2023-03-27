@@ -8,6 +8,10 @@ import javafx.stage.Stage;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Objects;
 
 public class Main extends Application {
@@ -15,7 +19,7 @@ public class Main extends Application {
     public Stage stage;
 
     @Override
-    public void start(Stage stage) {
+    public void start(Stage stage) throws IOException {
         try {
             this.stage = stage;
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Main.fxml")));
@@ -33,6 +37,7 @@ public class Main extends Application {
         } catch(Exception e){
             e.printStackTrace();
         }
+
     }
 
     public static void main(String[] args) {

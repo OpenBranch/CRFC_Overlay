@@ -1,7 +1,5 @@
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TextField;
-import javafx.stage.WindowEvent;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -13,62 +11,33 @@ public class Controller {
     public TextField RScoreId;
     public TextField NewsId;
 
-    int LeftScore;
-    int RightScore;
+    String LeftScore;
+    String RightScore;
 
     String LeftTeamName;
     String RightTeamName;
     String News;
 
-    public Controller() throws IOException {
-        //resets half
-//        FileWriter H2 = new FileWriter("TextFiles/Half.txt");
-//        H2.write("");
-//        H2.close();
-//
-//        //resets right score
-//        FileWriter RightScoreWriter = new FileWriter("TextFiles/RightScore.txt");
-//        RightScoreWriter.write("");
-//        RightScoreWriter.close();
-//
-//        //resets left score
-//        FileWriter LeftScoreWriter = new FileWriter("TextFiles/LeftScore.txt");
-//        LeftScoreWriter.write("");
-//        LeftScoreWriter.close();
-//
-//        //resets left team name
-//        FileWriter LeftWriter = new FileWriter("TextFiles/LeftName.txt");
-//        LeftWriter.write("");
-//        LeftWriter.close();
-//
-//        //resets right team name
-//        FileWriter RightWriter = new FileWriter("TextFiles/RightName.txt");
-//        RightWriter.write("");
-//        RightWriter.close();
-//
-//        FileWriter MatchETA = new FileWriter("TextFiles/ETA.txt");
-//        MatchETA.write("");
-//        MatchETA.close();
-    }
 
     //applies typed team names into field
     public void Submit(ActionEvent actionEvent) throws IOException {
 
         LeftTeamName = LTeamId.getText();
 
-        FileWriter LeftWriter = new FileWriter("TextFiles/LeftName.txt");
+        FileWriter LeftWriter = new FileWriter("src/TextFiles/LeftName.txt");
         LeftWriter.write(String.valueOf(LeftTeamName));
         LeftWriter.close();
 
         RightTeamName = RTeamId.getText();
 
-        FileWriter RightWriter = new FileWriter("TextFiles/RightName.txt");
+        FileWriter RightWriter = new FileWriter("src/TextFiles/RightName.txt");
         RightWriter.write(String.valueOf(RightTeamName));
         RightWriter.close();
     }
 
+    //
     public void LScore(ActionEvent actionEvent) throws IOException {
-        LeftScore = Integer.parseInt(LScoreId.getText());
+        LeftScore = LScoreId.getText();
         LScoreId.setText(String.valueOf(LeftScore));
 
         FileWriter LScore = new FileWriter("TextFiles/LeftScore.txt");
@@ -77,7 +46,7 @@ public class Controller {
     }
 
     public void RScore(ActionEvent actionEvent) throws IOException {
-        RightScore = Integer.parseInt(RScoreId.getText());
+        RightScore = RScoreId.getText();
         RScoreId.setText(String.valueOf(RightScore));
 
         FileWriter RScore = new FileWriter("src/TextFiles/RightScore.txt");
@@ -87,7 +56,7 @@ public class Controller {
 
     public void L6(ActionEvent actionEvent) throws IOException {
         LeftScore = LeftScore + 6;
-        LScoreId.setText(String.valueOf(LeftScore));
+        LScoreId.setText(LeftScore);
 
         FileWriter LeftScoreWriter = new FileWriter("TextFiles/LeftScore.txt");
         LeftScoreWriter.write(String.valueOf(LeftScore));
@@ -96,7 +65,7 @@ public class Controller {
 
     public void L3(ActionEvent actionEvent) throws IOException {
         LeftScore = LeftScore + 3;
-        LScoreId.setText(String.valueOf(LeftScore));
+        LScoreId.setText(LeftScore);
 
         FileWriter LeftScoreWriter = new FileWriter("TextFiles/LeftScore.txt");
         LeftScoreWriter.write(String.valueOf(LeftScore));
@@ -105,7 +74,7 @@ public class Controller {
 
     public void L2(ActionEvent actionEvent) throws IOException {
         LeftScore = LeftScore + 2;
-        LScoreId.setText(String.valueOf(LeftScore));
+        LScoreId.setText(LeftScore);
 
         FileWriter LeftScoreWriter = new FileWriter("TextFiles/LeftScore.txt");
         LeftScoreWriter.write(String.valueOf(LeftScore));
@@ -114,7 +83,7 @@ public class Controller {
 
     public void L1(ActionEvent actionEvent) throws IOException {
         LeftScore = LeftScore + 1;
-        LScoreId.setText(String.valueOf(LeftScore));
+        LScoreId.setText(LeftScore);
 
         FileWriter LeftScoreWriter = new FileWriter("TextFiles/LeftScore.txt");
         LeftScoreWriter.write(String.valueOf(LeftScore));
@@ -123,7 +92,7 @@ public class Controller {
 
     public void R6(ActionEvent actionEvent) throws IOException {
         RightScore = RightScore + 6;
-        RScoreId.setText(String.valueOf(RightScore));
+        RScoreId.setText(RightScore);
 
         FileWriter RightScoreWriter = new FileWriter("TextFiles/RightScore.txt");
         RightScoreWriter.write(String.valueOf(RightScore));
@@ -132,7 +101,7 @@ public class Controller {
 
     public void R3(ActionEvent actionEvent) throws IOException {
         RightScore = RightScore + 3;
-        RScoreId.setText(String.valueOf(RightScore));
+        RScoreId.setText(RightScore);
 
         FileWriter RightScoreWriter = new FileWriter("TextFiles/RightScore.txt");
         RightScoreWriter.write(String.valueOf(RightScore));
@@ -141,7 +110,7 @@ public class Controller {
 
     public void R2(ActionEvent actionEvent) throws IOException {
         RightScore = RightScore + 2;
-        RScoreId.setText(String.valueOf(RightScore));
+        RScoreId.setText(RightScore);
 
         FileWriter RightScoreWriter = new FileWriter("TextFiles/RightScore.txt");
         RightScoreWriter.write(String.valueOf(RightScore));
@@ -150,7 +119,7 @@ public class Controller {
 
     public void R1(ActionEvent actionEvent) throws IOException {
         RightScore = RightScore + 1;
-        RScoreId.setText(String.valueOf(RightScore));
+        RScoreId.setText(RightScore);
 
         FileWriter RightScoreWriter = new FileWriter("TextFiles/RightScore.txt");
         RightScoreWriter.write(String.valueOf(RightScore));
@@ -209,14 +178,12 @@ public class Controller {
         H2.close();
 
         //resets right score
-        RightScore = 0;
         RScoreId.setText(String.valueOf(RightScore));
         FileWriter RightScoreWriter = new FileWriter("TextFiles/RightScore.txt");
         RightScoreWriter.write("");
         RightScoreWriter.close();
 
         //resets left score
-        LeftScore = 0;
         LScoreId.setText(String.valueOf(LeftScore));
         FileWriter LeftScoreWriter = new FileWriter("TextFiles/LeftScore.txt");
         LeftScoreWriter.write("");
