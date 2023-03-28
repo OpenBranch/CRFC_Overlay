@@ -24,9 +24,10 @@ public class Main extends Application {
             this.stage = stage;
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Main.fxml")));
             stage.setTitle("CRFC Overlay");
-            //BufferedImage Image = ImageIO.read(Objects.requireNonNull(getClass().getResource("/Resources/Logos/SEAM 32x32.png")));
+            //BufferedImage Image = ImageIO.read(Objects.requireNonNull(getClass().getResource("TextFiles/Hederman_64x64.jpg")));
             //Image test = SwingFXUtils.toFXImage(Image, null);
             //stage.getIcons().add(test);
+            stage.getIcons().add(new Image("/TextFiles/Hederman_64x64.jpg"));
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.setResizable(false);

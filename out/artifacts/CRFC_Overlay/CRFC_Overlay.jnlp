@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="CRFC_Overlay.jnlp">
   <information>
-    <title>Thisisisa</title>
+    <title>CRFC_Overlay</title>
     <vendor>Unknown</vendor>
     <description>CRFC_Overlay</description>
     <offline-allowed/>
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="CRFC_Overlay.jar" size="66135" download="eager" />
+    <jar href="CRFC_Overlay.jar" size="71726" download="eager" />
   </resources>
   <jfx:javafx-desc  width="600" height="400" main-class="Main"  name="CRFC_Overlay" />
   <update check="background"/>
