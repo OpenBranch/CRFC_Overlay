@@ -29,7 +29,7 @@ For support, email stonegoblin9@gmail.com or join our discord server [discord](d
 >>**Using Overlay in OBS**
 1. Click `Scene Collection` in OBS
 2. Select newly created import
-3. Under `Sources` double click each `Text` source
+3. Under `Sources` double click each `Text` source and change file path
 ```bash
   These include:
   ETA
@@ -39,11 +39,10 @@ For support, email stonegoblin9@gmail.com or join our discord server [discord](d
   RightNAme
   LeftName
 ```
-4. Change file path to extracted CRFC_Overlay folder `TextFiles`
+4. File Path example
 ```bash
-  for example:
   old- D:/Desktop/GitHub/CRFC_Overlay/src/TextFiles/ETA.txt
 
   new- .../TextFiles/ETA.txt
 ```
-5. make sure you link the OBS properties file with the corosponding text document. like the `ETA` source needs to be linked with the `ETA.txt`
+5. Make sure you link the correct file to EACH text source in OBS. like the `ETA` source needs to be linked with the `ETA.txt`
