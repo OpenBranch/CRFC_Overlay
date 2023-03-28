@@ -39,7 +39,6 @@ For support, email stonegoblin9@gmail.com or join our discord server [discord](d
   RightNAme
   LeftName
 ```
-![Image1](https://imgur.com/a/nyhmpEO)
 4. Change file path to extracted CRFC_Overlay folder `TextFiles`
 ```bash
   for example:
@@ -47,5 +46,4 @@ For support, email stonegoblin9@gmail.com or join our discord server [discord](d
 
   new- .../TextFiles/ETA.txt
 ```
-![Image2](https://imgur.com/a/ojiZNNk)
 5. make sure you link the OBS properties file with the corosponding text document. like the `ETA` source needs to be linked with the `ETA.txt`
