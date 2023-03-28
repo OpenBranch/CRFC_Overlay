@@ -11,6 +11,8 @@ For support, email stonegoblin9@gmail.com or join our discord server [discord](d
 
 ## Installation
 
+[![Youtube Tutorial](https://img.youtube.com/vi/Lcuk0bTHBGY/0.jpg)](https://youtu.be/Lcuk0bTHBGY)
+
 >>**Program**
 1. Download the zip file called test `CRFC_Overlay.zip`
 2. Extract the zip to computer
