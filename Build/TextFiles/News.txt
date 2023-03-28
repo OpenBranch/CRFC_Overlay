@@ -1,1 +1,1 @@
-          NEWS: This is a test
+          NEWS: 
