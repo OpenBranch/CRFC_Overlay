@@ -1,4 +1,17 @@
-﻿for (int i = 0; i < 5; i++)
+﻿using System;
+using FireSharp;
+using FireSharp.Interfaces;
+
+namespace firebaseConfig
 {
-    Console.WriteLine("Hello, World!");
+    class MainClass
+    {
+        static void Main(string[] args)
+        {
+            firebaseConfig ifc = new firebaseConfig();
+            IFirebaseClient client;
+
+            client = new FirebaseClient();
+        }
+    }
 }

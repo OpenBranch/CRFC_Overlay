@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CRFC_Database_Stream_Link")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f445c1b80a8a2ee61d4a760bc2f385a84aabbbea")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8200a25a89d5a3126ddf61a1aca79feceb093eea")]
 [assembly: System.Reflection.AssemblyProductAttribute("CRFC_Database_Stream_Link")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CRFC_Database_Stream_Link")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
