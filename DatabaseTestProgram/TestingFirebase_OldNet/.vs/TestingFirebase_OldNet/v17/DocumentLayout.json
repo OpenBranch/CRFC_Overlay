@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\570475\\Downloads\\1_GitHubCode\\10_CRFC\\CRFC_Overlay\\DatabaseTestProgram\\TestingFirebase_OldNet\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{744968F4-D7BB-48D8-BC84-C52A2C22468F}|TestingFirebase_OldNet\\TestingFirebase_OldNet.csproj|c:\\users\\570475\\downloads\\1_githubcode\\10_crfc\\crfc_overlay\\databasetestprogram\\testingfirebase_oldnet\\testingfirebase_oldnet\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{744968F4-D7BB-48D8-BC84-C52A2C22468F}|TestingFirebase_OldNet\\TestingFirebase_OldNet.csproj|solutionrelative:testingfirebase_oldnet\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\570475\\Downloads\\1_GitHubCode\\10_CRFC\\CRFC_Overlay\\DatabaseTestProgram\\TestingFirebase_OldNet\\TestingFirebase_OldNet\\Program.cs",
+              "RelativeDocumentMoniker": "TestingFirebase_OldNet\\Program.cs",
+              "ToolTip": "C:\\Users\\570475\\Downloads\\1_GitHubCode\\10_CRFC\\CRFC_Overlay\\DatabaseTestProgram\\TestingFirebase_OldNet\\TestingFirebase_OldNet\\Program.cs",
+              "RelativeToolTip": "TestingFirebase_OldNet\\Program.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAYwHgAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T03:08:53.377Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

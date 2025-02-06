@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\570475\\Downloads\\1_GitHubCode\\10_CRFC\\CRFC_Overlay\\Database_Stream_LinkProgram\\CRFC_Database_Stream_Link\\CRFC_Database_Stream_Link\\CRFC_Database_Stream_Link.csproj": {}
+    "C:\\Users\\570475\\Downloads\\1_GitHubCode\\10_CRFC\\CRFC_Overlay\\DatabaseTestProgram\\TestingFirebase_OldNet\\TestingFirebase_OldNet\\TestingFirebase_OldNet.csproj": {}
   },
   "projects": {
-    "C:\\Users\\570475\\Downloads\\1_GitHubCode\\10_CRFC\\CRFC_Overlay\\Database_Stream_LinkProgram\\CRFC_Database_Stream_Link\\CRFC_Database_Stream_Link\\CRFC_Database_Stream_Link.csproj": {
+    "C:\\Users\\570475\\Downloads\\1_GitHubCode\\10_CRFC\\CRFC_Overlay\\DatabaseTestProgram\\TestingFirebase_OldNet\\TestingFirebase_OldNet\\TestingFirebase_OldNet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\570475\\Downloads\\1_GitHubCode\\10_CRFC\\CRFC_Overlay\\Database_Stream_LinkProgram\\CRFC_Database_Stream_Link\\CRFC_Database_Stream_Link\\CRFC_Database_Stream_Link.csproj",
-        "projectName": "CRFC_Database_Stream_Link",
-        "projectPath": "C:\\Users\\570475\\Downloads\\1_GitHubCode\\10_CRFC\\CRFC_Overlay\\Database_Stream_LinkProgram\\CRFC_Database_Stream_Link\\CRFC_Database_Stream_Link\\CRFC_Database_Stream_Link.csproj",
+        "projectUniqueName": "C:\\Users\\570475\\Downloads\\1_GitHubCode\\10_CRFC\\CRFC_Overlay\\DatabaseTestProgram\\TestingFirebase_OldNet\\TestingFirebase_OldNet\\TestingFirebase_OldNet.csproj",
+        "projectName": "TestingFirebase_OldNet",
+        "projectPath": "C:\\Users\\570475\\Downloads\\1_GitHubCode\\10_CRFC\\CRFC_Overlay\\DatabaseTestProgram\\TestingFirebase_OldNet\\TestingFirebase_OldNet\\TestingFirebase_OldNet.csproj",
         "packagesPath": "C:\\Users\\570475\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\570475\\Downloads\\1_GitHubCode\\10_CRFC\\CRFC_Overlay\\Database_Stream_LinkProgram\\CRFC_Database_Stream_Link\\CRFC_Database_Stream_Link\\obj\\",
+        "outputPath": "C:\\Users\\570475\\Downloads\\1_GitHubCode\\10_CRFC\\CRFC_Overlay\\DatabaseTestProgram\\TestingFirebase_OldNet\\TestingFirebase_OldNet\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -22,7 +22,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net9.0"
+          "net8.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -30,8 +30,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net9.0": {
-            "targetAlias": "net9.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -47,8 +47,14 @@
         }
       },
       "frameworks": {
-        "net9.0": {
-          "targetAlias": "net9.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "FireSharp": {
+              "target": "Package",
+              "version": "[2.0.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -60,6 +66,11 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
