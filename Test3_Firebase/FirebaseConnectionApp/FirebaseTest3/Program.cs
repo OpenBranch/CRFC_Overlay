@@ -1,59 +1,86 @@
-﻿using Google.Cloud.Firestore;
-using System;
+﻿using System;
+using System.Net;
+using System.Net.Sockets;
+using System.Text;
 using System.Threading.Tasks;
+
+/* Next Steps
+ *  - Setup text files and format stream to display that information
+ *  - C# program edit text files to update in real time
+ *  - I am sure the timer needing to update every second might cause some problems
+ *  - Pulling logo images dynamically from links?
+ *  - Socket communication between my computer and Aaron's computer, closing and re-opening connection
+ *  - Aaron's program sends me a signal saying reload data (Sends document name) which triggers the program to search that document on db and pull relevant information to text files
+ *  - Aaron's program sends a socket communication for time changed which updates my program's timer on stream for the game clock
+ */ 
+
+
 
 class Program
 {
-    static async Task Main(string[] args)
+    static async Task Main()
     {
+        int port = 5000;
+        TcpListener listener = new TcpListener(IPAddress.Any, port);
+
+        listener.Server.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
+        listener.Start();
+        Console.WriteLine($"Server started. Listening on port {port}...");
+
         // Replace "your-project-id" with your actual Firebase project ID
         var firestoreService = new FirestoreService("robotic-football-game-stats");
 
         try
         {
-            await firestoreService.ReadData();
+            //await firestoreService.ReadData();
+            //await firestoreService.AddData();
+            //await firestoreService.UpdateData();
+            //await firestoreService.DeleteField();
+            //await firestoreService.AddField();
+            //await firestoreService.DeleteDocument();
         }
         catch (Exception ex)
         {
             Console.WriteLine(ex.ToString());
         }
-    }
-}
 
-public class FirestoreService
-{
-    private FirestoreDb firestoreDb;
-
-    public FirestoreService(string projectId)
-    {
-        // Provide the path to the service account key file
-        string pathToServiceAccountKey = "D:\\GitHub_Repos\\CRFC_FirebaseSDK_Credentials.json";
-        Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", pathToServiceAccountKey);
-
-        // Initialize FirestoreDb instance
-        firestoreDb = FirestoreDb.Create(projectId);
-    }
-
-    public async Task ReadData()
-    {
-        // Reference to a Firestore collection
-        CollectionReference collection = firestoreDb.Collection("games");
-
-        // Query the collection and get documents
-        QuerySnapshot snapshot = await collection.GetSnapshotAsync();
-
-        // Iterate through the documents
-        foreach (DocumentSnapshot document in snapshot.Documents)
+        while (true)
         {
-            if (document.Exists)
-            {
-                Console.WriteLine($"Document ID: {document.Id}");
-                foreach (var field in document.ToDictionary())
-                {
-                    Console.WriteLine($"{field.Key}: {field.Value}");
-                }
-            }
+            TcpClient client = await listener.AcceptTcpClientAsync();
+            _ = Task.Run(() => HandleClientAsync(client));
         }
     }
+
+    static async Task HandleClientAsync(TcpClient client)
+    {
+        Console.WriteLine("Client connected.");
+
+        // Force socket closure immediately
+        client.LingerState = new LingerOption(true, 0);
+
+        using (NetworkStream stream = client.GetStream())
+        {
+            try
+            {
+                byte[] buffer = new byte[1024];
+                int bytesRead = await stream.ReadAsync(buffer, 0, buffer.Length);
+                string message = Encoding.UTF8.GetString(buffer, 0, bytesRead);
+
+                Console.WriteLine($"Received: {message}");
+
+                byte[] response = Encoding.UTF8.GetBytes($"Server received: {message}");
+                await stream.WriteAsync(response, 0, response.Length);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+        }
+
+        client.Close();
+        client.Dispose();
+        Console.WriteLine("Client disconnected.");
+    }
+
 }
 
