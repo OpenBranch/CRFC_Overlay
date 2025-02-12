@@ -27,7 +27,7 @@ public class FirestoreService
     public FirestoreService(string projectId)
     {
         // Provide the path to the service account key file
-        string pathToServiceAccountKey = "D:\\GitHub_Repos\\CRFC_Overlay\\Test3_Firebase\\FirebaseConnectionApp\\FirebaseTest3\\CRFC_FirebaseSDK_Credentials.json";
+        string pathToServiceAccountKey = "D:\\GitHub_Repos\\CRFC_FirebaseSDK_Credentials.json";
         Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", pathToServiceAccountKey);
 
         // Initialize FirestoreDb instance

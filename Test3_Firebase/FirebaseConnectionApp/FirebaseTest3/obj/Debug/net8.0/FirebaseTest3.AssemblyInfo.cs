@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FirebaseTest3")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dab12e5517d58e42152806fb0c3bc6394fc2bc28")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c3a8b95980e2d9518724194abb4a22c84a339dc8")]
 [assembly: System.Reflection.AssemblyProductAttribute("FirebaseTest3")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FirebaseTest3")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
