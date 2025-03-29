@@ -30,7 +30,7 @@ using System.Threading.Tasks.Dataflow;
 class Program
 {
     /*EXTRACTING TEAM LOGO IMAGES FOR STREAM*/
-    static string resourceName = "FirebaseTest3.TeamLogos.";
+    static string resourceName = "MainStream_Control_Project.TeamLogos.";
     static Bitmap ONULogo = LoadEmbeddedImage(resourceName + "ONULogo" + ".png");
     static Bitmap NDLogo = LoadEmbeddedImage(resourceName + "NDLogo" + ".png");
     static Bitmap ValpoLogo = LoadEmbeddedImage(resourceName + "ValpoLogo" + ".png");
@@ -48,16 +48,16 @@ class Program
     static Bitmap WriteStateLogo = LoadEmbeddedImage(resourceName + "WriteStateLogo" + ".png");
 
     /*EXTRACTING HELPER IMAGES FOR STREAM*/
-    static Bitmap HedermanTrophy = LoadEmbeddedImage("FirebaseTest3.MSCResources." + "Hederman" + ".png");
-    static Bitmap CRFCLogo = LoadEmbeddedImage("FirebaseTest3.MSCResources." + "CRFCLogo" + ".png");
-    static Bitmap BlackSquare = LoadEmbeddedImage("FirebaseTest3.MSCResources." + "BlackSquare" + ".png");
-    static Bitmap BackgroundOverlay = LoadEmbeddedImage("FirebaseTest3.MSCResources." + "BackgroundRender" + ".png");
+    static Bitmap HedermanTrophy = LoadEmbeddedImage("MainStream_Control_Project.MSCResources." + "Hederman" + ".png");
+    static Bitmap CRFCLogo = LoadEmbeddedImage("MainStream_Control_Project.MSCResources." + "CRFCLogo" + ".png");
+    static Bitmap BlackSquare = LoadEmbeddedImage("MainStream_Control_Project.MSCResources." + "BlackSquare" + ".png");
+    static Bitmap BackgroundOverlay = LoadEmbeddedImage("MainStream_Control_Project.MSCResources." + "BackgroundRender" + ".png");
 
 
     static async Task Main()
     {
         /*GET PROGRAM LEVEL INFORMATION*/
-        string jsonContent = GetEmbeddedResource("FirebaseTest3.CRFC_FirebaseSDK_Credentials.json");
+        string jsonContent = GetEmbeddedResource("MainStream_Control_Project.CRFC_FirebaseSDK_Credentials.json");
         string tempFilePath = Path.Combine(Path.GetTempPath(), "CRFC_FirebaseSDK_Credentials.json");
         File.WriteAllText(tempFilePath, jsonContent);
         Console.WriteLine("Firebase credentials extracted successfully!");
@@ -67,7 +67,7 @@ class Program
         await firestoreService.updateSocketServerIP(GetLocalIPv4(), port);
 
         /*EXTRACTING OBS LUA SCRIPT FOR CLOCK CONTROL*/
-        resourceName = "FirebaseTest3.OBSScripts.GameClockTimerScript.lua";
+        resourceName = "MainStream_Control_Project.OBSScripts.GameClockTimerScript.lua";
         var assembly = Assembly.GetExecutingAssembly();
         string OBSFileContent = "";
         using (Stream stream = assembly.GetManifestResourceStream(resourceName))
@@ -649,6 +649,17 @@ class Program
             textContent = OBSFileContent;
             File.WriteAllText(textFilePath, textContent);
 
+            //Creating the advertisements
+            newFolderPath = streamWorkingPath + "\\Advertisements";
+            Directory.CreateDirectory(newFolderPath);
+            SaveEmbeddedVideo("MainStream_Control_Project.Advertisements.MISUMI_1.mp4", streamWorkingPath + "\\Advertisements\\MISUMI_1.mp4");
+            SaveEmbeddedVideo("MainStream_Control_Project.Advertisements.MISUMI_2.mp4", streamWorkingPath + "\\Advertisements\\MISUMI_2.mp4");
+
+            //Creating the background Music
+            newFolderPath = streamWorkingPath + "\\Music";
+            Directory.CreateDirectory(newFolderPath);
+            SaveEmbeddedVideo("MainStream_Control_Project.BackgroundMusic.BackgroundMusic.mp4", streamWorkingPath + "\\Music\\BackgroundMusic.mp4");
+
             result = true;
         }
         catch (Exception ex)
@@ -853,5 +864,20 @@ class Program
         }
         return teamLogo;
     }
+
+    static void SaveEmbeddedVideo(string resourceName, string outputFilePath)
+    {
+        using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName))
+        {
+            if (stream == null)
+                throw new Exception("Embedded video not found: " + resourceName);
+
+            using (var fileStream = new FileStream(outputFilePath, FileMode.Create, FileAccess.Write))
+            {
+                stream.CopyTo(fileStream);
+            }
+        }
+    }
+
 }
 

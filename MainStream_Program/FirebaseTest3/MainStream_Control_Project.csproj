@@ -8,6 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Advertisements\MISUMI_1.mp4" />
+    <None Remove="Advertisements\MISUMI_2.mp4" />
+    <None Remove="BackgroundMusic\BackgroundMusic.mp4" />
     <None Remove="CRFC_FirebaseSDK_Credentials.json" />
     <None Remove="MSCResources\BackgroundRender.png" />
     <None Remove="MSCResources\BlackSquare.png" />
@@ -20,6 +23,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Advertisements\MISUMI_1.mp4" />
+    <EmbeddedResource Include="Advertisements\MISUMI_2.mp4" />
+    <EmbeddedResource Include="BackgroundMusic\BackgroundMusic.mp4" />
     <EmbeddedResource Include="CRFC_FirebaseSDK_Credentials.json" />
     <EmbeddedResource Include="MSCResources\BackgroundRender.png" />
     <EmbeddedResource Include="MSCResources\BlackSquare.png" />
