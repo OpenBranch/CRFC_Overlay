@@ -10,6 +10,10 @@
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
+#Firebase Credential Files
+CRFC_FirebaseSDK_Credentials.json
+FirebaseTest3.dll
+
 # Package Files #
 *.jar
 *.war
