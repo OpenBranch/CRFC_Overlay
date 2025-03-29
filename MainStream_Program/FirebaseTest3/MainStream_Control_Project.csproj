@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="CRFC_FirebaseSDK_Credentials.json" />
+    <None Remove="MSCResources\BackgroundRender.png" />
+    <None Remove="MSCResources\BlackSquare.png" />
+    <None Remove="MSCResources\Hederman.png" />
+    <None Remove="NavyLogo.png" />
+    <None Remove="NDLogo.png" />
+    <None Remove="OBSScripts\GameClockTimerScript.lua" />
+    <None Remove="ONULogo.png" />
+    <None Remove="ValpoLogo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="CRFC_FirebaseSDK_Credentials.json" />
+    <EmbeddedResource Include="MSCResources\BackgroundRender.png" />
+    <EmbeddedResource Include="MSCResources\BlackSquare.png" />
+    <EmbeddedResource Include="MSCResources\CRFCLogo.png" />
+    <EmbeddedResource Include="MSCResources\Hederman.png" />
+    <EmbeddedResource Include="OBSScripts\GameClockTimerScript.lua" />
+    <EmbeddedResource Include="TeamLogos\CalvinLogo.png" />
+    <EmbeddedResource Include="TeamLogos\CatholicLogo.png" />
+    <EmbeddedResource Include="TeamLogos\EvansvilleLogo.png" />
+    <EmbeddedResource Include="TeamLogos\HowardLogo.png" />
+    <EmbeddedResource Include="TeamLogos\IndianaTechLogo.png" />
+    <EmbeddedResource Include="TeamLogos\MiamiLogo.png" />
+    <EmbeddedResource Include="TeamLogos\MtUnionLogo.png" />
+    <EmbeddedResource Include="TeamLogos\NavyLogo.png" />
+    <EmbeddedResource Include="TeamLogos\NDLogo.png" />
+    <EmbeddedResource Include="TeamLogos\ONULogo.png" />
+    <EmbeddedResource Include="TeamLogos\PennStateLogo.png" />
+    <EmbeddedResource Include="TeamLogos\PurdueLogo.png" />
+    <EmbeddedResource Include="TeamLogos\TrineLogo.png" />
+    <EmbeddedResource Include="TeamLogos\ValpoLogo.png" />
+    <EmbeddedResource Include="TeamLogos\WriteStateLogo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Cloud.Firestore" Version="3.10.0" />
+    <PackageReference Include="System.Drawing.Common" Version="9.0.3" />
+  </ItemGroup>
+
+</Project>
