@@ -7,10 +7,6 @@
       "RelativeMoniker": "D:0:0:{37208FC0-FC15-4BAE-A282-02F62B6C7B31}|FirebaseTest3\\MainStream_Control_Project.csproj|solutionrelative:firebasetest3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{37208FC0-FC15-4BAE-A282-02F62B6C7B31}|FirebaseTest3\\MainStream_Control_Project.csproj|d:\\github_repos\\crfc_overlay\\mainstream_program\\firebasetest3\\serversocket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{37208FC0-FC15-4BAE-A282-02F62B6C7B31}|FirebaseTest3\\MainStream_Control_Project.csproj|solutionrelative:firebasetest3\\serversocket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{37208FC0-FC15-4BAE-A282-02F62B6C7B31}|FirebaseTest3\\MainStream_Control_Project.csproj|d:\\github_repos\\crfc_overlay\\mainstream_program\\firebasetest3\\firebasetesting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{37208FC0-FC15-4BAE-A282-02F62B6C7B31}|FirebaseTest3\\MainStream_Control_Project.csproj|solutionrelative:firebasetest3\\firebasetesting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -22,31 +18,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "FirebaseTesting.cs",
               "DocumentMoniker": "D:\\GitHub_Repos\\CRFC_Overlay\\MainStream_Program\\FirebaseTest3\\FirebaseTesting.cs",
               "RelativeDocumentMoniker": "FirebaseTest3\\FirebaseTesting.cs",
               "ToolTip": "D:\\GitHub_Repos\\CRFC_Overlay\\MainStream_Program\\FirebaseTest3\\FirebaseTesting.cs",
               "RelativeToolTip": "FirebaseTest3\\FirebaseTesting.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAqwAcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMYAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T23:34:35.277Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ServerSocket.cs",
-              "DocumentMoniker": "D:\\GitHub_Repos\\CRFC_Overlay\\MainStream_Program\\FirebaseTest3\\ServerSocket.cs",
-              "RelativeDocumentMoniker": "FirebaseTest3\\ServerSocket.cs",
-              "ToolTip": "D:\\GitHub_Repos\\CRFC_Overlay\\MainStream_Program\\FirebaseTest3\\ServerSocket.cs",
-              "RelativeToolTip": "FirebaseTest3\\ServerSocket.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T23:32:47.105Z",
+              "WhenOpened": "2025-03-18T23:34:35.277Z",
               "EditorCaption": ""
             },
             {
@@ -57,7 +41,7 @@
               "RelativeDocumentMoniker": "FirebaseTest3\\Program.cs",
               "ToolTip": "D:\\GitHub_Repos\\CRFC_Overlay\\MainStream_Program\\FirebaseTest3\\Program.cs",
               "RelativeToolTip": "FirebaseTest3\\Program.cs",
-              "ViewState": "AgIAAOUBAAAAAAAAAAAtwOgBAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAEACAAAAAAAAAAAewEoCAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-12T00:23:58.415Z",
               "EditorCaption": ""

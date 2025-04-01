@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub_Repos\\CRFC_Overlay\\MainStream_Program\\FirebaseConnectionApp\\FirebaseTest3\\MainStream_Control_Project.csproj": {}
+    "D:\\GitHub_Repos\\CRFC_Overlay\\MainStream_Program\\FirebaseTest3\\MainStream_Control_Project.csproj": {}
   },
   "projects": {
-    "D:\\GitHub_Repos\\CRFC_Overlay\\MainStream_Program\\FirebaseConnectionApp\\FirebaseTest3\\MainStream_Control_Project.csproj": {
+    "D:\\GitHub_Repos\\CRFC_Overlay\\MainStream_Program\\FirebaseTest3\\MainStream_Control_Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub_Repos\\CRFC_Overlay\\MainStream_Program\\FirebaseConnectionApp\\FirebaseTest3\\MainStream_Control_Project.csproj",
+        "projectUniqueName": "D:\\GitHub_Repos\\CRFC_Overlay\\MainStream_Program\\FirebaseTest3\\MainStream_Control_Project.csproj",
         "projectName": "MainStream_Control_Project",
-        "projectPath": "D:\\GitHub_Repos\\CRFC_Overlay\\MainStream_Program\\FirebaseConnectionApp\\FirebaseTest3\\MainStream_Control_Project.csproj",
+        "projectPath": "D:\\GitHub_Repos\\CRFC_Overlay\\MainStream_Program\\FirebaseTest3\\MainStream_Control_Project.csproj",
         "packagesPath": "C:\\Users\\jrrak\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub_Repos\\CRFC_Overlay\\MainStream_Program\\FirebaseConnectionApp\\FirebaseTest3\\obj\\publish\\win-x64\\",
+        "outputPath": "D:\\GitHub_Repos\\CRFC_Overlay\\MainStream_Program\\FirebaseTest3\\obj\\publish\\win-x64\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\VisualStudioFiles\\SDKs\\NuGetPackages"

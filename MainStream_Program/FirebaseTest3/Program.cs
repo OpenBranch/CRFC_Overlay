@@ -93,7 +93,9 @@ class Program
 
         //Get the location of the streaming folders (Using a file folder chooser dialog)
         string streamWorkingPath = getStreamWorkingPath();
-        setupStreamFolderStructure(streamWorkingPath, ONULogo, NDLogo, HedermanTrophy, CRFCLogo, BackgroundOverlay, BlackSquare, OBSFileContent, CalvinLogo, CatholicLogo, EvansvilleLogo, HowardLogo, IndianaTechLogo, MiamiLogo, MtUnionLogo, PennStateLogo, PurdueLogo, TrineLogo, WriteStateLogo);
+        bool generateFiles = getGenerateFiles();
+        Thread.Sleep(2000);
+        setupStreamFolderStructure(streamWorkingPath, ONULogo, NDLogo, HedermanTrophy, CRFCLogo, BackgroundOverlay, BlackSquare, OBSFileContent, CalvinLogo, CatholicLogo, EvansvilleLogo, HowardLogo, IndianaTechLogo, MiamiLogo, MtUnionLogo, PennStateLogo, PurdueLogo, TrineLogo, WriteStateLogo, generateFiles);
 
         /*SOCKET SERVER CODE (NO LONGER NEEDED ATM)
         Console.WriteLine("Socket Server Starting...");
@@ -559,14 +561,56 @@ class Program
         return selectedFolder;        
     }
 
-    static bool setupStreamFolderStructure(string streamWorkingPath, Bitmap team1Placeholder, Bitmap team2Placeholder, Bitmap hederman, Bitmap CRFCLogo, Bitmap BackgroundOverlay, Bitmap BlackSquare, string OBSFileContent, Bitmap CalvinLogo, Bitmap CatholicLogo, Bitmap EvansvilleLogo, Bitmap HowardLogo, Bitmap IndianaTechLogo, Bitmap MiamiLogo, Bitmap MtUnionLogo, Bitmap PennStateLogo, Bitmap PurdueLogo, Bitmap TrineLogo, Bitmap WriteStateLogo)
+    static bool getGenerateFiles()
+    {
+        bool result = true;
+        bool validAnswer = false;
+        string response = "";
+        while (!validAnswer)
+        {
+            Console.WriteLine("Do you wish to Generate all files? (Y/N)");
+            response = Console.ReadLine();
+
+            //Validate input
+            if (!string.IsNullOrWhiteSpace(response))
+            {
+                if (response.ToLower() == "y")
+                {
+                    result = true;
+                    validAnswer = true;
+                } else if (response.ToLower() == "n")
+                {
+                    result = false;
+                    validAnswer = true;
+                }
+            }
+        }
+        return result;
+    }
+
+    static bool setupStreamFolderStructure(string streamWorkingPath, Bitmap team1Placeholder, Bitmap team2Placeholder, Bitmap hederman, Bitmap CRFCLogo, Bitmap BackgroundOverlay, Bitmap BlackSquare, string OBSFileContent, Bitmap CalvinLogo, Bitmap CatholicLogo, Bitmap EvansvilleLogo, Bitmap HowardLogo, Bitmap IndianaTechLogo, Bitmap MiamiLogo, Bitmap MtUnionLogo, Bitmap PennStateLogo, Bitmap PurdueLogo, Bitmap TrineLogo, Bitmap WriteStateLogo, bool generateFiles)
     {
         bool result = false;
         try
         {
-            //Clear anything in the folder of the working path
-            DeleteFolderContents(streamWorkingPath);
-            //Console.WriteLine("Folder contents deleted successfully.");
+            if (generateFiles)
+            {
+                //Clear anything in the folder of the working path
+                DeleteFolderContents(streamWorkingPath);
+                //Console.WriteLine("Folder contents deleted successfully.");
+            }
+            else
+            {
+                try
+                {
+                    //Clear anything in the folder of the working path
+                    DeleteFolderContents(streamWorkingPath);
+                    //Console.WriteLine("Folder contents deleted successfully.");
+                } catch (Exception exc)
+                {
+
+                }
+            }
 
             //Create the folder for images and populate it with two images
             string newFolderPath = streamWorkingPath + "\\CurrentTeamInfo";
@@ -649,17 +693,19 @@ class Program
             textContent = OBSFileContent;
             File.WriteAllText(textFilePath, textContent);
 
-            //Creating the advertisements
-            newFolderPath = streamWorkingPath + "\\Advertisements";
-            Directory.CreateDirectory(newFolderPath);
-            SaveEmbeddedVideo("MainStream_Control_Project.Advertisements.MISUMI_1.mp4", streamWorkingPath + "\\Advertisements\\MISUMI_1.mp4");
-            SaveEmbeddedVideo("MainStream_Control_Project.Advertisements.MISUMI_2.mp4", streamWorkingPath + "\\Advertisements\\MISUMI_2.mp4");
+            if (generateFiles)
+            {
+                //Creating the advertisements
+                newFolderPath = streamWorkingPath + "\\Advertisements";
+                Directory.CreateDirectory(newFolderPath);
+                SaveEmbeddedVideo("MainStream_Control_Project.Advertisements.MISUMI_1.mp4", streamWorkingPath + "\\Advertisements\\MISUMI_1.mp4");
+                SaveEmbeddedVideo("MainStream_Control_Project.Advertisements.MISUMI_2.mp4", streamWorkingPath + "\\Advertisements\\MISUMI_2.mp4");
 
-            //Creating the background Music
-            newFolderPath = streamWorkingPath + "\\Music";
-            Directory.CreateDirectory(newFolderPath);
-            SaveEmbeddedVideo("MainStream_Control_Project.BackgroundMusic.BackgroundMusic.mp4", streamWorkingPath + "\\Music\\BackgroundMusic.mp4");
-
+                //Creating the background Music
+                newFolderPath = streamWorkingPath + "\\Music";
+                Directory.CreateDirectory(newFolderPath);
+                SaveEmbeddedVideo("MainStream_Control_Project.BackgroundMusic.BackgroundMusic.mp4", streamWorkingPath + "\\Music\\BackgroundMusic.mp4");
+            }
             result = true;
         }
         catch (Exception ex)
