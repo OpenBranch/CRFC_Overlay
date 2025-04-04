@@ -378,7 +378,7 @@ public class FirestoreService
                         {
                             //updateTournamentCollections = true;
                             prevTournamentCollectionsValue = bool.Parse(kvp.Value.ToString().ToLower());
-                            Console.WriteLine("Triggered an update Message");
+                            //Console.WriteLine("Triggered an update Message");
                             getNewTournamentCollections(newDoc);
 
                             //Wait 2 seconds before changing the value back to give it a minute to catch up

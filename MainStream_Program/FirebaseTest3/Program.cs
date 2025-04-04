@@ -313,16 +313,9 @@ class Program
                 foreach (var field in firestoreService.activeGame)
                 {
                     //Check left team name
-                    if (field.Key == "team1")
+                    if (field.Key == "team1Name")
                     {
-                        // Convert the nested object into a dictionary
-                        var team1Data = field.Value as Dictionary<string, object>;
-
-                        if (team1Data.TryGetValue("collegeName", out object nameValue))
-                        {
-                            LTeamName = nameValue.ToString();
-                            //Console.WriteLine($"Team 1 Name: {LTeamName}");
-                        }
+                        LTeamName =field.Value.ToString();
                     } else if (field.Key == "team1Points")
                     {
                         //Number of points scored so far by team #1
@@ -330,16 +323,9 @@ class Program
                     }
 
                     //Check right team name
-                    if (field.Key == "team2")
+                    if (field.Key == "team2Name")
                     {
-                        // Convert the nested object into a dictionary
-                        var team1Data = field.Value as Dictionary<string, object>;
-
-                        if (team1Data.TryGetValue("collegeName", out object nameValue))
-                        {
-                            RTeamName = nameValue.ToString();
-                            //Console.WriteLine($"Team 2 Name: {RTeamName}");
-                        }
+                        RTeamName = field.Value.ToString();
                     }
                     else if (field.Key == "team2Points")
                     {
