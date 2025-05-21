@@ -96,12 +96,25 @@ class Program
         bool generateFiles = getGenerateFiles();
         Thread.Sleep(2000);
         setupStreamFolderStructure(streamWorkingPath, ONULogo, NDLogo, HedermanTrophy, CRFCLogo, BackgroundOverlay, BlackSquare, OBSFileContent, CalvinLogo, CatholicLogo, EvansvilleLogo, HowardLogo, IndianaTechLogo, MiamiLogo, MtUnionLogo, PennStateLogo, PurdueLogo, TrineLogo, WriteStateLogo, generateFiles);
+        
+        /*  SETTING UP FIREBASE LISTENERS
+         * */
+        var firebase = new FirebaseV3("robotic-football-game-stats", tempFilePath);
+        await firebase.ListenToCollectionPathAsync("tournaments/2025-2026/Finals");
+        Console.WriteLine("Listening for changes. Press Enter to stop.");
 
-        /*SOCKET SERVER CODE (NO LONGER NEEDED ATM)
-        Console.WriteLine("Socket Server Starting...");
-        ServerSocket serverSocket = new ServerSocket(GetLocalIPv4(), port, firestoreService);
-        new Task(() => { serverSocket.runServerSocket(); }).Start();
-        */
+
+        string activeGamePath = await firebase.GetActiveGamePathAsync();
+        if (activeGamePath != null)
+        {
+            Console.WriteLine("Currently active game: " + activeGamePath);
+        }
+
+        while (true)
+        {
+            System.Threading.Thread.Sleep(200);
+        }
+
 
         await firestoreService.getActiveGameInformation();
         int previousSecond = 0;
