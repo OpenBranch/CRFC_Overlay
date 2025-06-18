@@ -100,15 +100,23 @@ class Program
         /*  SETTING UP FIREBASE LISTENERS
          * */
         var firebase = new FirebaseV3("robotic-football-game-stats", tempFilePath);
-        await firebase.ListenToCollectionPathAsync("tournaments/2025-2026/Finals");
-        Console.WriteLine("Listening for changes. Press Enter to stop.");
+        //await firebase.ListenToCollectionPathAsync("tournaments/2025-2026/Finals");
+        var now = DateTime.Now;
+        int startYear = now.Month >= 7 ? now.Year : now.Year; // School year typically starts in July or August
+        int endYear = startYear + 1;
+        await firebase.ListenToSubcollectionsRecursivelyAsync("tournaments", "" + startYear + "-" + endYear);
+        await firebase.ListenToCollectionPathAsync("Tournaments");
 
-
-        string activeGamePath = await firebase.GetActiveGamePathAsync();
-        if (activeGamePath != null)
+        // Scan all docs in "Tournaments"
+        QuerySnapshot yearDocs = await firebase.GetFirestoreDb().Collection("Tournaments").GetSnapshotAsync();
+        foreach (var yearDoc in yearDocs.Documents)
         {
-            Console.WriteLine("Currently active game: " + activeGamePath);
+            // Look for collections like "Finals", "Quarterfinals", etc. inside this doc
+            await firebase.ListenToDocumentPathAsync($"Tournaments/{yearDoc.Id}");
         }
+
+        Console.WriteLine("Listening for changes. Press Enter to stop.");
+        firebase.StartPeriodicSubcollectionRescan(TimeSpan.FromSeconds(10));
 
         while (true)
         {
