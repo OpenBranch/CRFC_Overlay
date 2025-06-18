@@ -96,23 +96,26 @@ class Program
         bool generateFiles = getGenerateFiles();
         Thread.Sleep(2000);
         setupStreamFolderStructure(streamWorkingPath, ONULogo, NDLogo, HedermanTrophy, CRFCLogo, BackgroundOverlay, BlackSquare, OBSFileContent, CalvinLogo, CatholicLogo, EvansvilleLogo, HowardLogo, IndianaTechLogo, MiamiLogo, MtUnionLogo, PennStateLogo, PurdueLogo, TrineLogo, WriteStateLogo, generateFiles);
-        
-        /*  SETTING UP FIREBASE LISTENERS
-         * */
+
+        /*  SETTING UP FIREBASE LISTENERS */
         var firebase = new FirebaseV3("robotic-football-game-stats", tempFilePath);
-        //await firebase.ListenToCollectionPathAsync("tournaments/2025-2026/Finals");
+
         var now = DateTime.Now;
         int startYear = now.Month >= 7 ? now.Year : now.Year; // School year typically starts in July or August
         int endYear = startYear + 1;
+
         await firebase.ListenToSubcollectionsRecursivelyAsync("tournaments", "" + startYear + "-" + endYear);
-        await firebase.ListenToCollectionPathAsync("Tournaments");
+        await firebase.ListenToCollectionPathAsync("tournaments");
+
+        // After listeners are set up, scan for the current active game and drive
+        await firebase.FindAndSetActiveGameAsync($"tournaments/{startYear}-{endYear}/Finals");
 
         // Scan all docs in "Tournaments"
-        QuerySnapshot yearDocs = await firebase.GetFirestoreDb().Collection("Tournaments").GetSnapshotAsync();
+        QuerySnapshot yearDocs = await firebase.GetFirestoreDb().Collection("tournaments").GetSnapshotAsync();
         foreach (var yearDoc in yearDocs.Documents)
         {
             // Look for collections like "Finals", "Quarterfinals", etc. inside this doc
-            await firebase.ListenToDocumentPathAsync($"Tournaments/{yearDoc.Id}");
+            await firebase.ListenToDocumentPathAsync($"tournaments/{yearDoc.Id}");
         }
 
         Console.WriteLine("Listening for changes. Press Enter to stop.");

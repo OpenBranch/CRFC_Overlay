@@ -1219,19 +1219,19 @@
   },
   "packageFolders": {
     "C:\\Users\\jrrak\\.nuget\\packages\\": {},
-    "D:\\VisualStudioFiles\\SDKs\\NuGetPackages": {}
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHub_Repos\\CRFC_Overlay\\MainStream_Program\\FirebaseTest3\\MainStream_Control_Project.csproj",
+      "projectUniqueName": "C:\\Users\\jrrak\\Documents\\GitHubRepos\\CRFCOverlay\\MainStream_Program\\FirebaseTest3\\MainStream_Control_Project.csproj",
       "projectName": "MainStream_Control_Project",
-      "projectPath": "D:\\GitHub_Repos\\CRFC_Overlay\\MainStream_Program\\FirebaseTest3\\MainStream_Control_Project.csproj",
+      "projectPath": "C:\\Users\\jrrak\\Documents\\GitHubRepos\\CRFCOverlay\\MainStream_Program\\FirebaseTest3\\MainStream_Control_Project.csproj",
       "packagesPath": "C:\\Users\\jrrak\\.nuget\\packages\\",
-      "outputPath": "D:\\GitHub_Repos\\CRFC_Overlay\\MainStream_Program\\FirebaseTest3\\obj\\",
+      "outputPath": "C:\\Users\\jrrak\\Documents\\GitHubRepos\\CRFCOverlay\\MainStream_Program\\FirebaseTest3\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\VisualStudioFiles\\SDKs\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
         "C:\\Users\\jrrak\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1292,7 +1292,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,17 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\GitHub_Repos\\CRFC_Overlay\\MainStream_Program\\",
+  "WorkspaceRootPath": "C:\\Users\\jrrak\\Documents\\GitHubRepos\\CRFCOverlay\\MainStream_Program\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{37208FC0-FC15-4BAE-A282-02F62B6C7B31}|FirebaseTest3\\MainStream_Control_Project.csproj|d:\\github_repos\\crfc_overlay\\mainstream_program\\firebasetest3\\firebasev3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{37208FC0-FC15-4BAE-A282-02F62B6C7B31}|FirebaseTest3\\MainStream_Control_Project.csproj|c:\\users\\jrrak\\documents\\githubrepos\\crfcoverlay\\mainstream_program\\firebasetest3\\firebasev3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{37208FC0-FC15-4BAE-A282-02F62B6C7B31}|FirebaseTest3\\MainStream_Control_Project.csproj|solutionrelative:firebasetest3\\firebasev3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{37208FC0-FC15-4BAE-A282-02F62B6C7B31}|FirebaseTest3\\MainStream_Control_Project.csproj|d:\\github_repos\\crfc_overlay\\mainstream_program\\firebasetest3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{37208FC0-FC15-4BAE-A282-02F62B6C7B31}|FirebaseTest3\\MainStream_Control_Project.csproj|c:\\users\\jrrak\\documents\\githubrepos\\crfcoverlay\\mainstream_program\\firebasetest3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{37208FC0-FC15-4BAE-A282-02F62B6C7B31}|FirebaseTest3\\MainStream_Control_Project.csproj|solutionrelative:firebasetest3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{37208FC0-FC15-4BAE-A282-02F62B6C7B31}|FirebaseTest3\\MainStream_Control_Project.csproj|d:\\github_repos\\crfc_overlay\\mainstream_program\\firebasetest3\\firebasetesting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{37208FC0-FC15-4BAE-A282-02F62B6C7B31}|FirebaseTest3\\MainStream_Control_Project.csproj|c:\\users\\jrrak\\documents\\githubrepos\\crfcoverlay\\mainstream_program\\firebasetest3\\firebasetesting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{37208FC0-FC15-4BAE-A282-02F62B6C7B31}|FirebaseTest3\\MainStream_Control_Project.csproj|solutionrelative:firebasetest3\\firebasetesting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -28,11 +28,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "FirebaseV3.cs",
-              "DocumentMoniker": "D:\\GitHub_Repos\\CRFC_Overlay\\MainStream_Program\\FirebaseTest3\\FirebaseV3.cs",
+              "DocumentMoniker": "C:\\Users\\jrrak\\Documents\\GitHubRepos\\CRFCOverlay\\MainStream_Program\\FirebaseTest3\\FirebaseV3.cs",
               "RelativeDocumentMoniker": "FirebaseTest3\\FirebaseV3.cs",
-              "ToolTip": "D:\\GitHub_Repos\\CRFC_Overlay\\MainStream_Program\\FirebaseTest3\\FirebaseV3.cs",
-              "RelativeToolTip": "FirebaseTest3\\FirebaseV3.cs",
-              "ViewState": "AgIAAKwAAAAAAAAAAAAtwLgAAAAJAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\jrrak\\Documents\\GitHubRepos\\CRFCOverlay\\MainStream_Program\\FirebaseTest3\\FirebaseV3.cs*",
+              "RelativeToolTip": "FirebaseTest3\\FirebaseV3.cs*",
+              "ViewState": "AgIAABcBAAAAAAAAAAAwwEEBAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-21T00:40:56.071Z",
               "EditorCaption": ""
@@ -41,23 +41,24 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "FirebaseTesting.cs",
-              "DocumentMoniker": "D:\\GitHub_Repos\\CRFC_Overlay\\MainStream_Program\\FirebaseTest3\\FirebaseTesting.cs",
+              "DocumentMoniker": "C:\\Users\\jrrak\\Documents\\GitHubRepos\\CRFCOverlay\\MainStream_Program\\FirebaseTest3\\FirebaseTesting.cs",
               "RelativeDocumentMoniker": "FirebaseTest3\\FirebaseTesting.cs",
-              "ToolTip": "D:\\GitHub_Repos\\CRFC_Overlay\\MainStream_Program\\FirebaseTest3\\FirebaseTesting.cs",
+              "ToolTip": "C:\\Users\\jrrak\\Documents\\GitHubRepos\\CRFCOverlay\\MainStream_Program\\FirebaseTest3\\FirebaseTesting.cs",
               "RelativeToolTip": "FirebaseTest3\\FirebaseTesting.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAAAIMAAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T23:34:35.277Z"
+              "WhenOpened": "2025-03-18T23:34:35.277Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\GitHub_Repos\\CRFC_Overlay\\MainStream_Program\\FirebaseTest3\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\jrrak\\Documents\\GitHubRepos\\CRFCOverlay\\MainStream_Program\\FirebaseTest3\\Program.cs",
               "RelativeDocumentMoniker": "FirebaseTest3\\Program.cs",
-              "ToolTip": "D:\\GitHub_Repos\\CRFC_Overlay\\MainStream_Program\\FirebaseTest3\\Program.cs",
+              "ToolTip": "C:\\Users\\jrrak\\Documents\\GitHubRepos\\CRFCOverlay\\MainStream_Program\\FirebaseTest3\\Program.cs",
               "RelativeToolTip": "FirebaseTest3\\Program.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAlwHQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAOoCAAAAAAAAAAAgwAYDAACXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-12T00:23:58.415Z",
               "EditorCaption": ""
